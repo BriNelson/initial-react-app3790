@@ -1,3 +1,4 @@
+import { charactors } from '../data/charactors'
 import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
