@@ -1,4 +1,4 @@
-export const charactors = [
+export const characters = [
   {
     name: "Harry Potter",
     alternate_names: [""],
