@@ -1,11 +1,17 @@
 import { characters } from "../data/characters";
 import { CharacterCard } from "./CharacterCard.js";
+import Box from "@mui/material/Box"
 import "./ExpenseItem.css";
 
 function CharacterCardContainer(props) {
   return (
-    <div>
-      <h2> does this work </h2>
+    <Box sx={{
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'row'
+    }}>
+    
+      
       {characters.map((character) => {
         return (
           <CharacterCard
@@ -16,7 +22,10 @@ function CharacterCardContainer(props) {
           />
         );
       })}
-    </div>
+    
+      </Box>
   );
 }
 export default CharacterCardContainer;
+
+

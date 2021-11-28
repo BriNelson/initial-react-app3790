@@ -1,4 +1,9 @@
-import  Card  from "@mui/material/Card";
+import Card from "@mui/material/Card";
+
+import CardContent from '@mui/material/CardContent';
+
+import Typography from '@mui/material/Typography';
+
 function CharacterCard(props) {
 
     const {
@@ -10,11 +15,29 @@ function CharacterCard(props) {
     
 
     return (
-        <div>
-        <Card key={fullName}>
-            {fullName} {house} {actor} {dateOfBirth}
-            </Card>
-            </div>
+        
+        <Card key={fullName} sx={{ minWidth: 275 }}>
+              {actor} 
+            
+        
+            <CardContent>
+        
+        <Typography variant="h5" component="div">
+        {fullName}
+        </Typography>
+        <Typography sx={{ mb: 1.5 }} color="text.secondary">
+        {house}
+        </Typography>
+        <Typography variant="body2">
+        {dateOfBirth}
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+        
+        </Card>
+            
+           
     )
 }
 
