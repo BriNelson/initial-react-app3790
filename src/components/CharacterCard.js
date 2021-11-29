@@ -16,7 +16,7 @@ function CharacterCard(props) {
 
     return (
         
-        <Card key={fullName} sx={{ minWidth: 275 }}>
+        <Card key={fullName} sx={{ minWidth: 275, m: 2}}>
               {actor} 
             
         
@@ -30,8 +30,7 @@ function CharacterCard(props) {
         </Typography>
         <Typography variant="body2">
         {dateOfBirth}
-          <br />
-          {'"a benevolent smile"'}
+          
         </Typography>
       </CardContent>
         
