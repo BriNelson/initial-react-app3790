@@ -1,3 +1,5 @@
+
+
 import { characters } from "../data/characters";
 import { CharacterCard } from "./CharacterCard.js";
 import Box from "@mui/material/Box"

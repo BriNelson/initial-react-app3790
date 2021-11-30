@@ -17,4 +17,16 @@ Be sure your repo includes a ReadMe.md file.  Inside that ReadMe file use Markdo
 Push your repository to GitHub, deploy your repo using Netlify, and submit both your GitHub URL AND your Netlify URL via this Canvas assignment.
 
 
-https://uvu365.sharepoint.com/sites/Course_dgm_3790_001_2021_fall_full_term-N8C6Mn7YBCfRj/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCourse%5Fdgm%5F3790%5F001%5F2021%5Ffall%5Ffull%5Fterm%2DN8C6Mn7YBCfRj%2FShared%20Documents%2FRecorded%20Sessions%2FRecordings%2FMeeting%20in%20%5FRecorded%20Sessions%5F%2D20210913%5F143344%2DMeeting%20Recording%2Emp4&parent=%2Fsites%2FCourse%5Fdgm%5F3790%5F001%5F2021%5Ffall%5Ffull%5Fterm%2DN8C6Mn7YBCfRj%2FShared%20Documents%2FRecorded%20Sessions%2FRecordings
+https://uvu365.sharepoint.com/sites/Course_dgm_3790_001_2021_fall_full_term-N8C6Mn7YBCfRj/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCourse%5Fdgm%5F3790%5F001%5F2021%5Ffall%5Ffull%5Fterm%2DN8C6Mn7YBCfRj%2FShared%20Documents%2FRecorded%20Sessions%2FRecordings%2FMeeting%20in%20%5FRecorded%20Sessions%5F%2D20210913%5F143344%2DMeeting%20Recording%2Emp4&parent=%2Fsites%2FCourse%5Fdgm%5F3790%5F001%5F2021%5Ffall%5Ffu  
+
+Continue to retrieve your local API data to render a list of UI items
+Continue to render your local API data using some combination of Cards, Avatars, List, etc. elements. These UI elements will be from the MUI version 5 pacakge.
+
+
+Add at least TODO: two ways in which a user may interact with your UI (click, input, etc.) and handle the events with some response by your UI
+
+Use the TODO:useState hook to store some local state and have some mechanism for updating that state.  Make sure you use a proper method for updating state that depends on previous state!
+
+
+Submit a Github URL for your source code for this assignment
+Also submit the Netlify URL for where your application is being served live. (can be a custom domain if you hooked one up)

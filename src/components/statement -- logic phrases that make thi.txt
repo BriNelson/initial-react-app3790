@@ -1,0 +1,3 @@
+statement -- logic phrases that make things work
+function -- groups statements
+expression -- line of code that evaluates to value
