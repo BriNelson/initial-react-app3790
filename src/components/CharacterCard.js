@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import Card from "@mui/material/Card";
-import Button from "@mui/material/Button";
+// import Button from "@mui/material/Button";
 import CardContent from '@mui/material/CardContent';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 import Typography from '@mui/material/Typography';
 
@@ -15,7 +16,7 @@ function CharacterCard(props) {
   //   } = props;
     
   const buttonText = "favorite"
-  const successBtn = "success"
+  
 
   const [favorite, setFavorite] = useState(false);
 
@@ -47,7 +48,7 @@ function CharacterCard(props) {
           
           </Typography>
           
-          <Button sx={{ color: favorite ? 'blue' : 'red'}}  variant="contained"  onClick={clickHandler}>{buttonText}</Button>
+          <BookmarkIcon sx={{ color: favorite ? 'blue' : 'red'}}  variant="contained"  onClick={clickHandler}>{buttonText}</BookmarkIcon>
       </CardContent>
         
         </Card>
