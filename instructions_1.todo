@@ -16,6 +16,13 @@ Be sure your repo includes a ReadMe.md file.  Inside that ReadMe file use Markdo
 (not the default ReadMe create-react-app provides)
 Push your repository to GitHub, deploy your repo using Netlify, and submit both your GitHub URL AND your Netlify URL via this Canvas assignment.
 
+////////////////////////////////////////////////////////////////
+
+
+
+
+
+
 
 https://uvu365.sharepoint.com/sites/Course_dgm_3790_001_2021_fall_full_term-N8C6Mn7YBCfRj/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCourse%5Fdgm%5F3790%5F001%5F2021%5Ffall%5Ffull%5Fterm%2DN8C6Mn7YBCfRj%2FShared%20Documents%2FRecorded%20Sessions%2FRecordings%2FMeeting%20in%20%5FRecorded%20Sessions%5F%2D20210913%5F143344%2DMeeting%20Recording%2Emp4&parent=%2Fsites%2FCourse%5Fdgm%5F3790%5F001%5F2021%5Ffall%5Ffu  
 
@@ -23,10 +30,61 @@ Continue to retrieve your local API data to render a list of UI items
 Continue to render your local API data using some combination of Cards, Avatars, List, etc. elements. These UI elements will be from the MUI version 5 pacakge.
 
 
-Add at least TODO: two ways in which a user may interact with your UI (click, input, etc.) and handle the events with some response by your UI
+Add at least TODO: two ways in which a user may interact with your UI (click, input, etc.) and handle the events with some response by your UI {DONE}
 
 Use the TODO:useState hook to store some local state and have some mechanism for updating that state.  Make sure you use a proper method for updating state that depends on previous state!
 
 
 Submit a Github URL for your source code for this assignment
 Also submit the Netlify URL for where your application is being served live. (can be a custom domain if you hooked one up)
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+For this assignment, you will be adding Context to your User Interface by providing a TODO:Context Provider and using the TODO: useContext Hook.  You will also use the useEffect Hook to manage the 
+side effects of making a Netlify function call to retrieve data from your remote API.  Even if you don't need a secret API key, you should retrieve your API data using a Netlify function.  To get full credit you must:
+
+Create a React Context and provide a Context Provider functional component.
+
+Provide a means for components to use the Context you created.
+
+TODO:Write a Netlify function that will retrieve your API data and provide it to your React component(s).
+
+Your Context component has at least one side effect that is handled using the useEffect hook
+
+Submit both your Netlify and your GitHub URLs for this assignment.
+
+
+context: lots of data throug properties
+
+////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+For this assignment, you will be adding to your User Interface by providing a user Signup or Login form.  The form will require users to signup or login in order to get access to your app's content.  The form will be accessible via a specific route.  To get full credit you must:
+
+Create a Signup form that captures at least 3 bits of user information
+The elements in the form must indicate if they are required or not
+The elements in the form must be validated
+The submission of the form must be stored in local state using the useContext hook
+State must be handled using the useState and useContext hooks
+Your app should have component side effects that are handled using the useEffect hook
+You must use an authorization context to decide if a page should be shown or not based on a User being logged in or not.
+At this stage of your app development, you should have at least 4 distinct routes to which the user can navigate.
+Submit both your Netlify and your GitHub URLs for this assignment.
+
+
+
+app barr
+https://uvu365.sharepoint.com/sites/Course_dgm_3790_001_2021_fall_full_term-N8C6Mn7YBCfRj/Shared%20Documents/Recorded%20Sessions/Recordings/Meeting%20in%20_Recorded%20Sessions_-20211013_143033-Meeting%20Recording.mp4?web=1

@@ -1,7 +1,8 @@
 
 import React, {useState} from "react";
 import { characters } from "../data/characters";
-import { CharacterCard } from "./CharacterCard.js";
+import { CharacterCard }  from "./CharacterCard.js";
+
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
@@ -9,10 +10,18 @@ import Button from "@mui/material/Button";
 
 import "./ExpenseItem.css";
 
-// const [favorites, setFavorites] = useState
+////////////////////////////////trying to do something with a state that relys on another state
 
-// const addToFavorites = () => {
+// const [favorites, setFavorites] = useState
+ 
+// const addToFavorites = (character) => {
+
+//   console.log(`${character} added to favorites`)
 //   console.log('state favorite container')
+//   setFavorites((prevState) => {
+//   return [...prevState, character]
+// })
+
 // }
 
 const style = {
@@ -35,6 +44,7 @@ function CharacterCardContainer(props) {
   
   return (
     <div>
+      
       <Button onClick={handleOpen}>Open modal</Button>
 <Modal
   open={open}
@@ -44,10 +54,10 @@ function CharacterCardContainer(props) {
 >
   <Box sx={style}>
     <Typography id="modal-modal-title" variant="h6" component="h2">
-      Text in a modal
+      Favorites
     </Typography>
     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-      Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+      I was going to do a list of favorites here.
     </Typography>
   </Box>
 </Modal>
