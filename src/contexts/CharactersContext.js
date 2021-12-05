@@ -3,7 +3,7 @@ import axios from 'axios'
 import { RepeatOneSharp } from '@mui/icons-material'
 
 const CongressContext = React.createClass({
-    senators: [],
+    characters: [],
     reps: []
 
 })
@@ -12,7 +12,7 @@ const CongressContext = React.createClass({
 
 
 export const CongressContextProvider = (props) => {
-    const [sentators, setSenators] = React.useState([])
+    const [characters, setSenators] = React.useState([])
     // const [rep, setReps] = React.useState([])
 
     React.useEffect(() => {
@@ -32,4 +32,14 @@ export const CongressContextProvider = (props) => {
         fetchSenators()
     },[])//only runs once
     
+    return (
+        <CongressContext.Provider value={{
+            characters,
+        }}>
+            {props.children}
+
+
+
+        </CongressContext.Provider>
+    )
 }
