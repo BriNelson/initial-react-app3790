@@ -16,8 +16,8 @@ export const CongressContextProvider = (props) => {
     React.useEffect(() => {
         const fetchSenators = async () => {
             try {
-                const response = await axios.get('/characters')
-                const characters = await response.data.results[0].characters
+                const response = await axios.get('./senate')
+                const characters = await response.data
                 console.log(response)
                 setSenators(characters)
             } catch (error){
@@ -41,5 +41,8 @@ export const CongressContextProvider = (props) => {
         </CongressContext.Provider>
     )
 }
+
+// use effect = side effect when state changes
+
 
 export const useCongressContext = () => React.useContext(CongressContext)

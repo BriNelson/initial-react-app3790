@@ -1,8 +1,9 @@
 
 import React, { useState } from "react";
 
-import { characters } from "../data/characters";
-import { CharacterCard }  from "./CharacterCard.js";
+// import { characters } from "../data/characters";
+import { CharacterCard } from "./CharacterCard.js";
+import { useCongressContext } from "../contexts/CharactersContext"
 
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -42,7 +43,7 @@ function CharacterCardContainer(props) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  
+  const memberData = useCongressContext()
   return (
     <div>
       
@@ -73,7 +74,7 @@ function CharacterCardContainer(props) {
     }}>
     
       
-      {characters.map((character) => {
+      {memberData.characters.map((character) => {
         return (
           <CharacterCard
             fullName={character.name}
