@@ -1,11 +1,9 @@
 import * as React from 'react'
 import axios from 'axios'
-import { RepeatOneSharp } from '@mui/icons-material'
+// import { RepeatOneSharp } from '@mui/icons-material'
 
-const CongressContext = React.createClass({
+const CongressContext = React.createContext({
     characters: [],
-    reps: []
-
 })
 
 //useEfect -- something happens evertime we do something else
@@ -43,3 +41,5 @@ export const CongressContextProvider = (props) => {
         </CongressContext.Provider>
     )
 }
+
+export const useCongressContext = () => React.useContext(CongressContext)
