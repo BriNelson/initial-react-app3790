@@ -1,6 +1,7 @@
 
 import React, { useState } from "react";
 
+
 // import { characters } from "../data/characters";
 import { CharacterCard } from "./CharacterCard.js";
 import { useCongressContext } from "../contexts/CharactersContext"

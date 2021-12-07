@@ -16,7 +16,7 @@ export const CongressContextProvider = (props) => {
     React.useEffect(() => {
         const fetchSenators = async () => {
             try {
-                const response = await axios.get('./senate')
+                const response = await axios.get('/senate')
                 const characters = await response.data
                 console.log(response)
                 setSenators(characters)
