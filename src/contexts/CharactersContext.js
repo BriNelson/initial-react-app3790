@@ -15,8 +15,9 @@ export const CongressContextProvider = (props) => {
 
     React.useEffect(() => {
         const fetchSenators = async () => {
+            const senateUrl = `/.netlify/functions/congress`
             try {
-                const response = await axios.get('/senate')
+                const response = await axios.get(senateUrl)
                 const characters = await response.data
                 console.log(response)
                 setSenators(characters)
