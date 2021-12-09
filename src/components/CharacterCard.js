@@ -20,10 +20,15 @@ function CharacterCard(props) {
     
     
     setFavorite(!favorite);
-
+   
+    // handleEmptyImage
     
   }
-
+// const imageReplace = () => {
+//   if (props.image != "") {
+//     return props.image
+//   } else(console.log("error")) 
+// }
 
     return (
         
@@ -32,8 +37,10 @@ function CharacterCard(props) {
               <CardMedia
         component="img"
         height="400"
+  
         image={props.image}
-        alt="green iguana"
+          alt={props.fullName}
+          on
       />
         
             <CardContent>
