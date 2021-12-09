@@ -82,6 +82,7 @@ function CharacterCardContainer(props) {
             house={character.house}
             dateOfBirth={character.dateOfBirth}
             id={character.name}
+            image={character.image}
           />
         );
       })}

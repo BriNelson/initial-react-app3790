@@ -3,17 +3,13 @@ import Card from "@mui/material/Card";
 // import Button from "@mui/material/Button";
 import CardContent from '@mui/material/CardContent';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
+import CardMedia from '@mui/material/CardMedia';
 
 import Typography from '@mui/material/Typography';
 
 function CharacterCard(props) {
   
-  // const {
-  //       fullName,
-  //       house,
-  //       actor,
-  //       dateOfBirth
-  //   } = props;
+ 
     
   const buttonText = "favorite"
   
@@ -33,7 +29,12 @@ function CharacterCard(props) {
         
         <Card key={props.fullName} sx={{ minWidth: 275, m: 2}}>
               {props.actor} 
-            
+              <CardMedia
+        component="img"
+        height="400"
+        image={props.image}
+        alt="green iguana"
+      />
         
             <CardContent>
         
