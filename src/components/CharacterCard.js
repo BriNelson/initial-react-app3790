@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 import CardContent from '@mui/material/CardContent';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import CardMedia from '@mui/material/CardMedia';
-
+// import pictureFiller from '/ravenclawBoy.png'
 import Typography from '@mui/material/Typography';
 
 function CharacterCard(props) {
@@ -33,15 +33,20 @@ function CharacterCard(props) {
     return (
         
         <Card key={props.fullName} sx={{ minWidth: 275, m: 2}}>
-              {props.actor} 
-              <CardMedia
+        {props.actor}
+        {(props.image !== "") ? ( <CardMedia
         component="img"
         height="400"
-  
         image={props.image}
-          alt={props.fullName}
-          on
-      />
+          alt={props.fullName}/>
+        
+        ) : ( <CardMedia
+          component="img"
+          height="400"
+          image="/public/ravenclawBoy.png"
+            alt={props.fullName}/> )}
+              
+        
         
             <CardContent>
         
