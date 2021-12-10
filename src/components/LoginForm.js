@@ -1,6 +1,6 @@
 import React from "react";
-import Formik from "formik"
-import * as Yup from 'yup'
+import { Formik } from "formik";
+import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -13,6 +13,12 @@ function LoginForm() {
           email: "test@test.com",
           password: "testpass",
         }}
+        validationSchema={Yup.object().shape({
+          email: Yup.string()
+            .email("invalid email")
+            .max(255)
+            .required("required"),
+        })}
         onSubmit={(value, { setErrors, setStatus, setSubmitting }) => {
           try {
             setStatus({ success: true });
@@ -41,6 +47,7 @@ function LoginForm() {
               error={Boolean(touched.email && errors.email)}
               onBlur={handleBlur}
               onChange={handleChange}
+              helperText={touched.email && errors.email}
               variant="standard"
               margin="normal"
               label="Email"
@@ -50,10 +57,13 @@ function LoginForm() {
               fullWidth
             >
               Email
-            </TextField>
+                      </TextField>
+                      {/*---------------Password-------------*/}
             <TextField
+              error={Boolean(touched.email && errors.email)}
               onBlur={handleBlur}
               onChange={handleChange}
+              helperText={touched.email && errors.email}
               variant="standard"
               margin="normal"
               label="password"
@@ -64,7 +74,12 @@ function LoginForm() {
             >
               Login
             </TextField>
-            <Button disabled={isSubmitting} variant="text" margin="normal" color="primary">
+            <Button
+              disabled={isSubmitting}
+              variant="text"
+              margin="normal"
+              color="primary"
+            >
               login
             </Button>
           </form>
