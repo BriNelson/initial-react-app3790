@@ -17,7 +17,8 @@ function LoginForm() {
           email: Yup.string()
             .email("invalid email")
             .max(255)
-            .required("required"),
+                .required("required"),
+            password: Yup.string().min(4, '4 characters required').max(255).required('required')
         })}
         onSubmit={(value, { setErrors, setStatus, setSubmitting }) => {
           try {
