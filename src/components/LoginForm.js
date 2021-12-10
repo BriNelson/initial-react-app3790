@@ -5,7 +5,8 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
-function LoginForm() {
+function LoginForm(props) {
+  const {closeHandler} = props
   return (
     <Box>
       <Formik
@@ -17,8 +18,11 @@ function LoginForm() {
           email: Yup.string()
             .email("invalid email")
             .max(255)
-                .required("required"),
-            password: Yup.string().min(4, '4 characters required').max(255).required('required')
+            .required("required"),
+          password: Yup.string()
+            .min(4, "4 characters required")
+            .max(255)
+            .required("required"),
         })}
         onSubmit={(value, { setErrors, setStatus, setSubmitting }) => {
           try {
@@ -29,6 +33,8 @@ function LoginForm() {
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
+          } finally {
+            closeHandler() // TODO: fix login closeHandler invalid password hanlder not working
           }
         }}
       >
@@ -41,7 +47,7 @@ function LoginForm() {
           isSubmitting,
           touched,
         }) => (
-          //   TODO:57:10
+          //   TODO:107 exit login
 
           <form noValidate onSubmit={handleSubmit}>
             <TextField
@@ -58,8 +64,8 @@ function LoginForm() {
               fullWidth
             >
               Email
-                      </TextField>
-                      {/*---------------Password-------------*/}
+            </TextField>
+            {/*---------------Password-------------*/}
             <TextField
               error={Boolean(touched.email && errors.email)}
               onBlur={handleBlur}
