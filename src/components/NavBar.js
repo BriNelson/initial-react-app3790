@@ -16,17 +16,7 @@ import Modal from "@mui/material/Modal";
 
 const pages = ["Products", "Pricing", "Blog"];
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
+
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -117,12 +107,12 @@ const ResponsiveAppBar = () => {
               LOGIN
             </Button>
             <Modal open={open}>
-              <Box sx={style}>
-                <Typography variant="body1" color="initial">
+              
+                {/* <Typography variant="body1" color="initial">
                   Login
-                </Typography>
+                </Typography> */}
                 <LoginForm closeHandler={handleClose}/>
-              </Box>
+              
             </Modal>
           </Box>
         </Toolbar>

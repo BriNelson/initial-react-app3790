@@ -5,10 +5,22 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+
 function LoginForm(props) {
   const {closeHandler} = props
   return (
-    <Box>
+    <Box sx={style} >
       <Formik
         initialValues={{
           email: "test@test.com",
@@ -67,10 +79,10 @@ function LoginForm(props) {
             </TextField>
             {/*---------------Password-------------*/}
             <TextField
-              error={Boolean(touched.email && errors.email)}
+              error={Boolean(touched.password && errors.password)}
               onBlur={handleBlur}
               onChange={handleChange}
-              helperText={touched.email && errors.email}
+              helperText={touched.password && errors.password}
               variant="standard"
               margin="normal"
               label="password"

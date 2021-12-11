@@ -4,15 +4,15 @@
 
 * Work with command-line tools and NPM to create and manage your project within a real development toolset.
 
-* Allow communication between components using props and the Context API.
+* Allow communication between components using props and the Context API. //TODO: have some of this
 
-* Present a form for user input that provides useful form validation and feedback for at least 3 data input items (e.g. name, password).
+* Present a form for user input that provides useful form validation and feedback for at least 3 data input items (e.g. name, password). //TODO: need on more validation spot
 
-* Create at least 5 custom components and use them within at least two of your other components.
+* Create at least 5 custom components and use them within at least two of your other components. TODO: have 3, 2 more should be easy
 
 * Use a mix of CSS animations and Transition Component transitions to enhance some aspects of your project.
 
-* Connect to a server using Netlify functions and display retrieved data including at least 5 item details (accessed by details route) in your UI.
+* Connect to a server using Netlify functions and display retrieved data including at least 5 item details (accessed by details route) in your UI. 
 
 * Provide at least 3 different routes with navigation between them using React Router.
 
