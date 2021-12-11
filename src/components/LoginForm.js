@@ -18,7 +18,8 @@ const style = {
 };
 
 function LoginForm(props) {
-  const {closeHandler} = props
+  const { closeHandler } = props
+  
   return (
     <Box sx={style} >
       <Formik
@@ -38,6 +39,7 @@ function LoginForm(props) {
         })}
         onSubmit={(value, { setErrors, setStatus, setSubmitting }) => {
           try {
+            console.log('submit button working')
             setStatus({ success: true });
             setSubmitting(false);
           } catch (err) {
@@ -46,7 +48,7 @@ function LoginForm(props) {
             setErrors({ submit: err.message });
             setSubmitting(false);
           } finally {
-            closeHandler() // TODO: fix login closeHandler invalid password hanlder not working
+            closeHandler()
           }
         }}
       >
@@ -98,6 +100,7 @@ function LoginForm(props) {
               variant="text"
               margin="normal"
               color="primary"
+              type="submit"
             >
               login
             </Button>

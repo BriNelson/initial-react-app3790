@@ -34,6 +34,7 @@ const ResponsiveAppBar = () => {
   const handleClose = () => setOpen(false);
 
   return (
+    <Box>
     <AppBar position="static">
       <Container maxWidth="100%">
         <Toolbar disableGutters>
@@ -57,30 +58,7 @@ const ResponsiveAppBar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+           
           </Box>
           <Typography
             variant="h6"
@@ -106,18 +84,20 @@ const ResponsiveAppBar = () => {
             <Button sx={{ my: 2, color: "white" }} onClick={handleOpen}>
               LOGIN
             </Button>
-            <Modal open={open}>
-              
-                {/* <Typography variant="body1" color="initial">
-                  Login
-                </Typography> */}
-                <LoginForm closeHandler={handleClose}/>
-              
-            </Modal>
           </Box>
+          
         </Toolbar>
       </Container>
     </AppBar>
+    <Modal open={open}>
+              
+    {/* <Typography variant="body1" color="initial">
+      Login
+    </Typography> */}
+    <LoginForm closeHandler={handleClose} />
+  
+      </Modal>
+      </Box>
   );
 };
 export { ResponsiveAppBar };
