@@ -5,17 +5,19 @@ import { ResponsiveAppBar } from "./components/NavBar";
 
 import { CongressContextProvider } from './contexts/CharactersContext'
 import { Route } from 'react-router-dom';
-import Welcome from './components/Welcome'
-
+import { Routes } from 'react-router-dom'
+import Welcome from './pages/Welcome';
 function App() {
   
   return (
     <div>
       <CongressContextProvider>
-      <ResponsiveAppBar></ResponsiveAppBar>
-      <Route path="/welcome"><Welcome /></Route>
+        <ResponsiveAppBar></ResponsiveAppBar>
+        <Routes>
+      <Route path="/welcome"element={<Welcome />}/>
+      <Route path="/congress"element={<ExpenseItem />}/>
       
-      <Route path="/congress"><ExpenseItem/></Route>
+      </Routes>
       </CongressContextProvider>
       </div>
     
