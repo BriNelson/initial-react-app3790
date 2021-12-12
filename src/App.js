@@ -1,4 +1,4 @@
-import ExpenseItem from "./components/CharacterCardContainer";
+import ExpenseItem from "./pages/CharacterCardContainer";
 import * as React from "react";
 
 import { ResponsiveAppBar } from "./components/NavBar";

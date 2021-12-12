@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 
 // import { characters } from "../data/characters";
-import { CharacterCard } from "./CharacterCard.js";
+import { CharacterCard } from "../components/CharacterCard.js";
 import { useCongressContext } from "../contexts/CharactersContext"
 
 import Box from "@mui/material/Box";
@@ -11,7 +11,7 @@ import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-import "./ExpenseItem.css";
+// import "./ExpenseItem.css";
 
 ////////////////////////////////trying to do something with a state that relys on another state
 
