@@ -15,7 +15,7 @@ import NetlifyIdentityContext from "react-netlify-identity-gotrue";
 function App() {
   return (
     <div>
-      <NetlifyIdentityContext url="https://pensive-johnson-5afb23.netlify.app/.netlify/identity">
+      <NetlifyIdentityContext url="https://pensive-johnson-5afb23.netlify.app">
       <CongressContextProvider>
         <ResponsiveAppBar></ResponsiveAppBar>
         <Routes>
