@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import {useIdentityContext} from "react-netlify-identity-gotrue"
 
 const style = {
   position: "absolute",
@@ -13,13 +14,14 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 400,
   bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
+  border: "1px solid #000",
+  
   p: 4,
 };
 
 function SignUpForm(props) {
   const navigate = useNavigate()
+  const identity = useIdentityContext()
   const { closeHandler } = props
   const handlePageClose = () => navigate("/welcome")
   
@@ -27,10 +29,15 @@ function SignUpForm(props) {
     <Box sx={style} >
       <Formik
         initialValues={{
+          userName: "Brian Nelson",
           email: "test@test.com",
           password: "testpass",
         }}
         validationSchema={Yup.object().shape({
+          userName: Yup.string()
+            .min(4, 'mustbe at least 4')
+            .max(40)
+            .required("required"),
           email: Yup.string()
             .email("invalid email")
             .max(255)
@@ -40,9 +47,9 @@ function SignUpForm(props) {
             .max(255)
             .required("required"),
         })}
-        onSubmit={(value, { setErrors, setStatus, setSubmitting }) => {
+        onSubmit={async(value, { setErrors, setStatus, setSubmitting }) => {
           try {
-            console.log('submit button working')
+            
             setStatus({ success: true });
             setSubmitting(false);
           } catch (err) {
@@ -50,11 +57,18 @@ function SignUpForm(props) {
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
-          } finally {
-            handlePageClose()
-            closeHandler()
-            
-          }
+            await identity.signup({
+
+              email: value.email, password: value.password, user_metadata: {
+                full_name: value.userName
+              }
+            }).then(() => {
+              handlePageClose()
+              closeHandler()
+              console.log('submit button working')
+              
+            })
+          } 
         }}
       >
         {({
@@ -76,7 +90,7 @@ function SignUpForm(props) {
               helperText={touched.userName && errors.userName}
               variant="standard"
               margin="normal"
-              label="userName"
+              label="Username"
               name="userName"
               type="text"
               value={values.userName}
