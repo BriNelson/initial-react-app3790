@@ -1,11 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import {useIdentityContext} from "react-netlify-identity-gotrue"
+import { useIdentityContext } from "react-netlify-identity-gotrue";
 
 const style = {
   position: "absolute",
@@ -15,18 +15,18 @@ const style = {
   width: 400,
   bgcolor: "background.paper",
   border: "1px solid #000",
-  
+
   p: 4,
 };
 
 function SignUpForm(props) {
-  const navigate = useNavigate()
-  const identity = useIdentityContext()
-  const { closeHandler } = props
-  const handlePageClose = () => navigate("/welcome")
-  
+  const navigate = useNavigate();
+  const identity = useIdentityContext();
+  const { closeHandler } = props;
+  const handlePageClose = () => navigate("/welcome");
+
   return (
-    <Box sx={style} >
+    <Box sx={style}>
       <Formik
         initialValues={{
           userName: "Brian Nelson",
@@ -35,7 +35,7 @@ function SignUpForm(props) {
         }}
         validationSchema={Yup.object().shape({
           userName: Yup.string()
-            .min(4, 'mustbe at least 4')
+            .min(4, "mustbe at least 4")
             .max(40)
             .required("required"),
           email: Yup.string()
@@ -47,28 +47,30 @@ function SignUpForm(props) {
             .max(255)
             .required("required"),
         })}
-        onSubmit={async(value, { setErrors, setStatus, setSubmitting }) => {
+        onSubmit={async (value, { setErrors, setStatus, setSubmitting }) => {
           try {
-            
             setStatus({ success: true });
             setSubmitting(false);
+            console.log("submit button working");
           } catch (err) {
             console.log(err);
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
-            await identity.signup({
-
-              email: value.email, password: value.password, user_metadata: {
-                full_name: value.userName
-              }
-            }).then(() => {
-              handlePageClose()
-              closeHandler()
-              console.log('submit button working')
-              
-            })
-          } 
+            await identity
+              .signup({
+                email: value.email,
+                password: value.password,
+                user_metadata: {
+                  full_name: value.userName,
+                },
+              })
+              .then(() => {
+                handlePageClose();
+                closeHandler();
+                
+              });
+          }
         }}
       >
         {({
@@ -83,7 +85,7 @@ function SignUpForm(props) {
           //   TODO:107 exit login
 
           <form noValidate onSubmit={handleSubmit}>
-<TextField
+            <TextField
               error={Boolean(touched.userName && errors.userName)}
               onBlur={handleBlur}
               onChange={handleChange}
