@@ -27,7 +27,7 @@ const ResponsiveAppBar = () => {
   const handleClose = () => setOpen(false);
 
   const navigate = useNavigate()
-  const handleNavChoice = () => { navigate("/welcome")};
+  const handleSignUp = () => { navigate("/signUp")};
 
   return (
     <Box>
@@ -45,19 +45,19 @@ const ResponsiveAppBar = () => {
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Button
-                onClick={handleNavChoice}
+                onClick={handleSignUp}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 students
               </Button>
               <Button
-                onClick={handleNavChoice}
+                onClick={handleSignUp}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 Staff
               </Button>
               <Button
-                onClick={handleNavChoice}
+                onClick={handleSignUp}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 SignUp
