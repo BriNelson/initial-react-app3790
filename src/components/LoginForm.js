@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import { useIdentityContext } from "react-netlify-identity-gotrue";
 
 const style = {
   position: "absolute",
@@ -20,6 +21,7 @@ const style = {
 
 function LoginForm(props) {
   const navigate = useNavigate()
+  const identity = useIdentityContext();
   const { closeHandler } = props
   const handlePageClose = () => navigate("/welcome")
   
@@ -40,11 +42,20 @@ function LoginForm(props) {
             .max(255)
             .required("required"),
         })}
-        onSubmit={(value, { setErrors, setStatus, setSubmitting }) => {
+        onSubmit={async(value, { setErrors, setStatus, setSubmitting }) => {
           try {
             console.log('submit button working')
             setStatus({ success: true });
             setSubmitting(false);
+            await identity.login({
+              email: value.email,
+              password: value.password,
+            })
+            .then(() => {
+              handlePageClose();
+              closeHandler();
+            });
+
           } catch (err) {
             console.log(err);
             setStatus({ success: false });
