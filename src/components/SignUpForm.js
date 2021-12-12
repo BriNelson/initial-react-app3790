@@ -23,7 +23,7 @@ function SignUpForm(props) {
   const navigate = useNavigate();
   const identity = useIdentityContext();
   const { closeHandler } = props;
-  const handlePageClose = () => navigate("/welcome");
+  const handlePageClose = () => navigate("/");
 
   return (
     <Box sx={style}>
