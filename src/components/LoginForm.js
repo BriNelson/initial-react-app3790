@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"
 import { Formik } from "formik";
 import * as Yup from "yup";
 import TextField from "@mui/material/TextField";
@@ -18,7 +19,9 @@ const style = {
 };
 
 function LoginForm(props) {
+  const navigate = useNavigate()
   const { closeHandler } = props
+  const handlePageClose = () => navigate("/welcome")
   
   return (
     <Box sx={style} >
@@ -48,7 +51,9 @@ function LoginForm(props) {
             setErrors({ submit: err.message });
             setSubmitting(false);
           } finally {
+            handlePageClose()
             closeHandler()
+            
           }
         }}
       >
