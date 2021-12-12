@@ -52,24 +52,25 @@ function SignUpForm(props) {
             setStatus({ success: true });
             setSubmitting(false);
             console.log("submit button working");
-          } catch (err) {
+            await identity.signup({
+              email: value.email,
+              password: value.password,
+              user_metadata: {
+                full_name: value.userName,
+              },
+            })
+            .then(() => {
+              handlePageClose();
+              closeHandler();
+            });
+          }
+          
+          catch (err) {
             console.log(err);
             setStatus({ success: false });
             setErrors({ submit: err.message });
             setSubmitting(false);
-            await identity
-              .signup({
-                email: value.email,
-                password: value.password,
-                user_metadata: {
-                  full_name: value.userName,
-                },
-              })
-              .then(() => {
-                handlePageClose();
-                closeHandler();
-                
-              });
+            
           }
         }}
       >
