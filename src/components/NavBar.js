@@ -60,7 +60,7 @@ const ResponsiveAppBar = () => {
                 onClick={handleNavChoice}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                login
+                SignUp
               </Button>
             </Box>
 
