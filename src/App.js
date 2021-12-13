@@ -14,6 +14,7 @@ import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import NetlifyIdentityContext from "react-netlify-identity-gotrue";
 function App() {
+  
   return (
     <>
       <div sx={{

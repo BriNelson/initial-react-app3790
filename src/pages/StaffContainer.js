@@ -48,7 +48,7 @@ function CharacterCardContainer(props) {
   return (
     <div>
       
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpen}>Favorites</Button>
 <Modal
   open={open}
   onClose={handleClose}
