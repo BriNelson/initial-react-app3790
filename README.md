@@ -6,10 +6,10 @@
  
 ### 1. Effectively use conditional logic and JavaScript array methods(e.g. Filter, Map, Reduce, Find) to render large lists.
 
-<p>Can be found on [line 77](src/pages/CharacterCardContainer.js) of characterCardCcontainer</p>
+<p>Can be found on </p>[line 77](src/pages/CharacterCardContainer.js) <p>of characterCardCcontainer</p>
 
 ### 2. Encapsulate your code as React functional components.
-<p>Best seen in [App.js](/guides/content/editing-an-existing-page) and [index.js](/guides/content/editing-an-existing-page)</p>
+<p>Best seen in</p> [App.js](/guides/content/editing-an-existing-page)<p>and</p> [index.js](/guides/content/editing-an-existing-page)
 
 ### 3. Work with command-line tools and NPM to create and manage your project within a real development toolset.
 <p>"netlify run dev" runs dev server</p>
