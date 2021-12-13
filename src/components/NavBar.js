@@ -29,7 +29,8 @@ const ResponsiveAppBar = () => {
   const identity = useIdentityContext();
   const navigate = useNavigate()
   const handleSignUp = () => { navigate("/signUp") };
-  const handleStudents = () => { navigate("/Characters")};
+  const handleStudents = () => { navigate("/Characters") };
+  const handleHouses = () => { navigate("/HousesPage") }
 
   return (
     <Box>
@@ -53,13 +54,13 @@ const ResponsiveAppBar = () => {
                 onClick={handleStudents}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                students
+                Characters
               </Button>
               <Button
-                onClick={handleSignUp}
+                onClick={handleHouses}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
-                Staff
+                Houses
               </Button>
               
               {identity.user && !identity.provisionalUser && ( <Button

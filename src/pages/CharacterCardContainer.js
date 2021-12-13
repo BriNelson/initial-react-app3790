@@ -7,6 +7,9 @@ import { CharacterCard } from "../components/CharacterCard.js";
 import { useCharacterContext } from "../contexts/CharactersContext"
 import ravenclawBoy from "../../src/components/ravenclawBoy.png"
 import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+
 // import Modal from "@mui/material/Modal";
 // import Typography from "@mui/material/Typography";
 // import Button from "@mui/material/Button";
@@ -63,10 +66,17 @@ onClose={handleClose}
   </Typography>
 </Box>
 </Modal> */}
+<Container sx={{
+      marginTop:"50px"
+    }} >
 
-
-
-
+      <Typography variant="h3" sx={{
+ 
+      marginBottom:"30px"
+    }} >
+        Harry Potter Characters
+      </Typography>
+      </Container>
     <Box sx={{
       display: 'flex',
       flexWrap: 'wrap',
@@ -89,6 +99,7 @@ onClose={handleClose}
       })}
     
       </Box>
+      
       </div>
   );
 }
