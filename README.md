@@ -6,20 +6,20 @@
  
 ### 1. Effectively use conditional logic and JavaScript array methods(e.g. Filter, Map, Reduce, Find) to render large lists.
 
-<p>Can be found on line 77 of characterCardCcontainer</p>
+<p>Can be found on [line 77](initial-react-app3790/src/pages/CharacterCardContainer.js) of characterCardCcontainer</p>
 
 ### 2. Encapsulate your code as React functional components.
-<p>Best seen in App.js and index.js</p>
+<p>Best seen in [App.js](/guides/content/editing-an-existing-page) and [index.js](/guides/content/editing-an-existing-page)</p>
 
 ### 3. Work with command-line tools and NPM to create and manage your project within a real development toolset.
 <p>"netlify run dev" runs dev server</p>
-<p> npm dependencies used, can be seen in package.json</p>
+<p> npm dependencies used, can be seen in [package.json](/guides/content/editing-an-existing-page)</p>
 
 ### 4. Allow communication between components using props and the Context API. 
-<p>props passed on line 77 of CharcterCardContainer</p>
+<p>props passed on [line 77](/guides/content/editing-an-existing-page) of CharcterCardContainer</p>
 
 ### 5. Present a form for user input that provides useful form validation and feedback for at least 3 data input items (e.g. name, password).
-<p>Signup form works and validates logout not currently working something broke. Code here, deployed example here</p>
+<p>Signup form works and validates logout not currently working something broke. [Code here](/guides/content/editing-an-existing-page), deployed [example here](/guides/content/editing-an-existing-page)</p>
 
 ### 6. Create at least 5 custom components and use them within at least two of your other components.
 1. NavBar
