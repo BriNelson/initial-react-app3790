@@ -45,8 +45,8 @@ function CharacterCard(props) {
         ) : ( <CardMedia
           component="img"
             height="400"
-            width ="300"
-            image={props.image}
+            width ="200"
+            image={props.replaceImage}
             // image={ImageFill}
             alt={props.fullName}/> )}
               
