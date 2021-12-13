@@ -6,19 +6,19 @@
 
 * Allow communication between components using props and the Context API. //TODO: have some of this
 
-* Present a form for user input that provides useful form validation and feedback for at least 3 data input items (e.g. name, password). //TODO: need on more validation spot
+* Present a form for user input that provides useful form validation and feedback for at least 3 data input items (e.g. name, password). //TODO: doneish i think
 
 * Create at least 5 custom components and use them within at least two of your other components. TODO: have 3, 2 more should be easy
 
 * Use a mix of CSS animations and Transition Component transitions to enhance some aspects of your project.
 
-* Connect to a server using Netlify functions and display retrieved data including at least 5 item details (accessed by details route) in your UI. 
+* Connect to a server using Netlify functions and display retrieved data including at least 5 item details (accessed by details route) in your UI. //TODO: need to display 5 items
 
-* Provide at least 3 different routes with navigation between them using React Router.
+* Provide at least 3 different routes with navigation between them using React Router. TODO: need one more rout
 
-* Manage your application's general and signup/login Authentication state using Hooks and the Context API.
+* Manage your application's general and signup/login Authentication state using Hooks and the Context API. TODO: need the button to change
 
-* Structure, document, and deploy your final project code according to common industry practices.
+* Structure, document, and deploy your final project code according to common industry practices. deployed finall and fix commits
 
 You will submit the GitHub URL for your project AND the URL of where your project is deployed online (Netlify).  The ReadMe file in your GitHub repo will list where in your code each 
 
