@@ -2,7 +2,7 @@
 # Harry Potter app
  
  
- Effectively use conditional logic and JavaScript array methods(e.g. Filter, Map, Reduce, Find) to render large lists.
+ ### Effectively use conditional logic and JavaScript array methods(e.g. Filter, Map, Reduce, Find) to render large lists.
 
 ### Encapsulate your code as React functional components.
 
