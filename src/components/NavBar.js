@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useIdentityContext } from "react-netlify-identity-gotrue";
 import LoginForm from "./LoginForm";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -25,7 +26,7 @@ const ResponsiveAppBar = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  const identity = useIdentityContext();
   const navigate = useNavigate()
   const handleSignUp = () => { navigate("/signUp")};
 
@@ -56,26 +57,28 @@ const ResponsiveAppBar = () => {
               >
                 Staff
               </Button>
-              <Button
+              
+              {identity.user && !identity.provisionalUser && ( <Button
                 onClick={handleSignUp}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 SignUp
-              </Button>
+              </Button>)}
+             
             </Box>
 
-            <Box sx={{ flexGrow: 0 }}>
-              {/* onClick={handleOpen} */}
-              <Button sx={{ my: 2, color: "white" }} onClick={handleOpen}>
-                LOGIN
-              </Button>
-            </Box>
+            
             {/* 40:08 */}
             <Box sx={{ flexGrow: 0 }}>
+              {identity.provisionalUser && (
               <Button sx={{ my: 2, color: "white" }}>
                 <NavLink to="/login">LOGIN</NavLink>
-              </Button>
+                </Button>
+                )}
             </Box>
+            {identity.user && (
+              <Button color='inherit' onclick={identity.logout}>logout</Button>
+            )}
           </Toolbar>
         </Container>
       </AppBar>
