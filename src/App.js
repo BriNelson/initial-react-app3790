@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { ResponsiveAppBar } from "./components/NavBar";
 
-import { CongressContextProvider } from "./contexts/CharactersContext";
+import { CharacterContextProvider } from "./contexts/CharactersContext";
 
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
@@ -20,7 +20,7 @@ function App() {
         backgroundColor: "black"
       }}>
       <NetlifyIdentityContext url="https://pensive-johnson-5afb23.netlify.app">
-      <CongressContextProvider>
+      <CharacterContextProvider>
         <ResponsiveAppBar></ResponsiveAppBar>
         <Routes>
           <Route path="/" element={<Welcome />} />
@@ -31,7 +31,7 @@ function App() {
             <Route path="/signUp" element={<SignUpForm />} />
             
         </Routes>
-      </CongressContextProvider>
+      </CharacterContextProvider>
         </NetlifyIdentityContext>
         </div>
     </>

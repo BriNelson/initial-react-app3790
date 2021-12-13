@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 // import { characters } from "../data/characters";
 import { CharacterCard } from "../components/CharacterCard.js";
-import { useCongressContext } from "../contexts/CharactersContext"
+import { useCharacterContext } from "../contexts/CharactersContext"
 
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -44,7 +44,7 @@ function CharacterCardContainer(props) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const memberData = useCongressContext()
+  const characterData = useCharacterContext()
   return (
     <div>
       
@@ -74,7 +74,7 @@ function CharacterCardContainer(props) {
     }}>
     
       
-      {memberData.characters.map((character) => {
+      {characterData.characters.map((character) => {
         return (
           <CharacterCard
             fullName={character.name}

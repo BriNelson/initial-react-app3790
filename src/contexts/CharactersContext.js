@@ -2,25 +2,25 @@ import * as React from 'react'
 import axios from 'axios'
 // import { RepeatOneSharp } from '@mui/icons-material'
 
-const CongressContext = React.createContext({
+const CharacterContext = React.createContext({
     characters: [],
 })
 
 //useEfect -- something happens evertime we do something else
 
 
-export const CongressContextProvider = (props) => {
-    const [characters, setSenators] = React.useState([])
+export const CharacterContextProvider = (props) => {
+    const [characters, setCharacters] = React.useState([])
     // const [rep, setReps] = React.useState([])
 
     React.useEffect(() => {
-        const fetchSenators = async () => {
-            const senateUrl = `/.netlify/functions/congress`
+        const fetchCharacters = async () => {
+            const characterUrl = `/.netlify/functions/harryPotterCharacters`
             try {
-                const response = await axios.get(senateUrl)
+                const response = await axios.get(characterUrl)
                 const characters = await response.data
                 console.log(response)
-                setSenators(characters)
+                setCharacters(characters)
             } catch (error){
                 console.log(error)
 
@@ -28,22 +28,22 @@ export const CongressContextProvider = (props) => {
 
 
         }
-        fetchSenators()
+        fetchCharacters()
     },[])//only runs once
     
     return (
-        <CongressContext.Provider value={{
+        <CharacterContext.Provider value={{
             characters,
         }}>
             {props.children}
 
 
 
-        </CongressContext.Provider>
+        </CharacterContext.Provider>
     )
 }
 
 // use effect = side effect when state changes
 
 
-export const useCongressContext = () => React.useContext(CongressContext)
+export const useCharacterContext = () => React.useContext(CharacterContext)
