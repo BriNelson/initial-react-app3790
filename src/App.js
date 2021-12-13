@@ -1,4 +1,4 @@
-import ExpenseItem from "./pages/CharacterCardContainer";
+import CharacterCardContainer from "./pages/CharacterCardContainer";
 import * as React from "react";
 
 import { ResponsiveAppBar } from "./components/NavBar";
@@ -26,7 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Welcome />} />
           <Route path="/welcome" element={<Welcome />} />
-          <Route path="/congress" element={<ExpenseItem />} />
+          <Route path="/Characters" element={<CharacterCardContainer />} />
           <Route path="/HousesPage" element={<HousesPage />} />
             <Route path="/login" element={<LoginForm />} />
             <Route path="/signUp" element={<SignUpForm />} />

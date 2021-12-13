@@ -29,7 +29,7 @@ const ResponsiveAppBar = () => {
   const identity = useIdentityContext();
   const navigate = useNavigate()
   const handleSignUp = () => { navigate("/signUp") };
-  const handleStudents = () => { navigate("/congress")};
+  const handleStudents = () => { navigate("/Characters")};
 
   return (
     <Box>
@@ -45,7 +45,7 @@ const ResponsiveAppBar = () => {
               component="div"
               sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
             >
-              LOGO
+              Harry Potter api
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
