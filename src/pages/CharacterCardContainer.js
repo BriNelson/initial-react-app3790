@@ -5,7 +5,7 @@
 
 import { CharacterCard } from "../components/CharacterCard.js";
 import { useCharacterContext } from "../contexts/CharactersContext"
-import ravenclawBoy from "C:/Users/ladof/Desktop/01-starting-setup/src/components/ravenclawBoy.png"
+import ravenclawBoy from "../../src/components/ravenclawBoy.png"
 import Box from "@mui/material/Box";
 // import Modal from "@mui/material/Modal";
 // import Typography from "@mui/material/Typography";
