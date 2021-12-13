@@ -35,15 +35,17 @@ function CharacterCard(props) {
         
         <Card key={props.fullName} sx={{ minWidth: 275, m: 2}}>
         {props.actor}
-        {(props.image !== "") ? ( <CardMedia
+        {(props.image !== "") ? ( <CardMedia sx={{width: "285px"}}
         component="img"
-        height="400"
+          height="400"
+          maxWidth="200"
         image={props.image}
           alt={props.fullName}/>
         
         ) : ( <CardMedia
           component="img"
-          height="400"
+            height="400"
+            width ="300"
             image={props.image}
             // image={ImageFill}
             alt={props.fullName}/> )}

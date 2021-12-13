@@ -24,15 +24,19 @@ const ResponsiveAppBar = () => {
 
 
   const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => setOpen(true);
+  
   const handleClose = () => setOpen(false);
   const identity = useIdentityContext();
   const navigate = useNavigate()
-  const handleSignUp = () => { navigate("/signUp")};
+  const handleSignUp = () => { navigate("/signUp") };
+  const handleStudents = () => { navigate("/congress")};
 
   return (
     <Box>
-      <AppBar position="static">
+      <AppBar position="static"  sx={{
+
+    backgroundColor: 'black',
+  }}>
         <Container maxWidth="100%">
           <Toolbar disableGutters>
             <Typography
@@ -46,7 +50,7 @@ const ResponsiveAppBar = () => {
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               <Button
-                onClick={handleSignUp}
+                onClick={handleStudents}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 students
