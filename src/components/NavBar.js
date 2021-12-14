@@ -63,7 +63,7 @@ const ResponsiveAppBar = () => {
                 Houses
               </Button>
               
-              {identity.user && !identity.provisionalUser && ( <Button
+              {!identity.user && !identity.provisionalUser && ( <Button
                 onClick={handleSignUp}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
