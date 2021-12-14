@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
 import CardMedia from "@mui/material/CardMedia";
-// import ImageFill from 'src/components/ravenclawBoy.png';
+
 import Typography from "@mui/material/Typography";
 
 function CharacterCard(props) {
@@ -54,7 +54,7 @@ function CharacterCard(props) {
         <Typography sx={{ mb: 1.5 }} color="text.secondary">
           {props.house}
         </Typography>
-        <Typography variant="body2">{props.dateOfBirth}</Typography>
+        
 
         <BookmarkIcon
           sx={{ color: favorite ? "blue" : "red" }}

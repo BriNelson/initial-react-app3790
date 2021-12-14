@@ -4,7 +4,10 @@ import Container from "@mui/material/Container";
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import CardMedia from "@mui/material/CardMedia";
-import hogwarts_house_element_window_by_hallowkey_d78rp79 from "../../src/images/griffindor.jpg";
+import gryfindorCrestImg from "../../src/images/griffindor.jpg";
+import slytherinCrestImg from "../../src/images/slytherin.jpg";
+import HufflepuffCrestImg from "../../src/images/Hufflepuff.jpg";
+import ravenclawCrestImg from "../../src/images/ravenclaw.jpg";
 import { CardActionArea } from "@mui/material";
 
 function HouseCards() {
@@ -28,7 +31,7 @@ function HouseCards() {
           <CardMedia
             component="img"
             height="250"
-            image={hogwarts_house_element_window_by_hallowkey_d78rp79}
+            image={gryfindorCrestImg}
             alt="green iguana"
           />
         </CardActionArea>
@@ -41,11 +44,11 @@ function HouseCards() {
           width: 250,
         }}
       >
-        <CardActionArea>
+        <CardActionArea onClick={console.log("card action area")}> 
           <CardMedia
             component="img"
             height="250"
-            image={hogwarts_house_element_window_by_hallowkey_d78rp79}
+            image={slytherinCrestImg}
             alt="green iguana"
           />
         </CardActionArea>
@@ -61,7 +64,7 @@ function HouseCards() {
           <CardMedia
             component="img"
             height="250"
-            image={hogwarts_house_element_window_by_hallowkey_d78rp79}
+            image={ravenclawCrestImg}
             alt="green iguana"
           />
         </CardActionArea>
@@ -77,7 +80,7 @@ function HouseCards() {
           <CardMedia
             component="img"
             height="250"
-            image={hogwarts_house_element_window_by_hallowkey_d78rp79}
+            image={HufflepuffCrestImg}
             alt="green iguana"
           />
         </CardActionArea>
