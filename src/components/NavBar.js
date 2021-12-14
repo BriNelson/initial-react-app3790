@@ -63,18 +63,20 @@ const ResponsiveAppBar = () => {
                 Houses
               </Button>
               
-              {!identity.user && !identity.provisionalUser && ( <Button
-                onClick={handleSignUp}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                SignUp
-              </Button>)}
+              
              
             </Box>
 
             
             {/* 40:08 */}
+            
             <Box sx={{ flexGrow: 0 }}>
+            {!identity.user && !identity.provisionalUser && ( <Button
+                onClick={handleSignUp}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Sign Up
+              </Button>)}
               {identity.provisionalUser && (
               <Button sx={{ my: 2, color: "white" }}>
                 <NavLink to="/login">LOGIN</NavLink>
@@ -82,7 +84,7 @@ const ResponsiveAppBar = () => {
                 )}
             </Box>
             {identity.user && (
-              <Button color='inherit' onclick={identity.logout}>logout</Button>
+              <Button color='inherit' onClick={identity.logout}>logout</Button>
             )}
           </Toolbar>
         </Container>
