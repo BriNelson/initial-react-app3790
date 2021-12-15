@@ -9,7 +9,7 @@
 Can be found on [line 77](src/pages/CharacterCardContainer.js) of characterCardCcontainer
 
 ### 2. Encapsulate your code as React functional components.
-Best seen in [App.js](/src/app.js)and [index.js](/index/app.js)
+Best seen in [App.js](/src/App.js) and [index.js](/src/idex.js)
 
 ### 3. Work with command-line tools and NPM to create and manage your project within a real development toolset.
 "netlify run dev" runs dev server
@@ -38,10 +38,10 @@ Not done
  Netlify funcitons [here](netlify/functions)
 
 ### 9. Provide at least 3 different routes with navigation between them using React Router.
-Routing all done with React Router V6 can be seen here on [line 26](/src/app.js) 
+Routing all done with React Router V6 can be seen here on [line 26](/src/App.js) 
 
 ### 10. Manage your application's general and signup/login Authentication state using Hooks and the Context API. button to change
-Login authentication found [here](src/components/SignUpForm.js), identity context found in [singUpForm line24] (src/components/SignUpForm.js) and throughout.
+Login authentication found [here](src/components/SignUpForm.js), identity context found in [singUpForm line24](src/components/SignUpForm.js) and throughout.
 
 ### 11. Structure, document, and deploy your final project code according to common industry practices. deployed finall and fix commits
 [netlify URL](https://pensive-johnson-5afb23.netlify.app)
