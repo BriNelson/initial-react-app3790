@@ -11,6 +11,7 @@ Can be found on [line 77](src/pages/CharacterCardContainer.js) of characterCardC
 ### 2. Encapsulate your code as React functional components.
 Best seen in [App.js](/src/App.js) and [index.js](/src/idex.js)
 
+
 ### 3. Work with command-line tools and NPM to create and manage your project within a real development toolset.
 "netlify run dev" runs dev server
  npm dependencies used, can be seen in [package.json](/package.json)
