@@ -46,7 +46,7 @@ function CharacterCard(props) {
           component="img"
             height="400"
             width ="200"
-            image={props.replaceImage}
+            image={props.image}
             // image={ImageFill}
             alt={props.fullName}/> )}
               

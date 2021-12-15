@@ -5,7 +5,7 @@ import React, { useState } from "react";
 // import { characters } from "../data/characters";
 import { CharacterCard } from "../components/CharacterCard.js";
 import { useCharacterContext } from "../contexts/CharactersContext"
-import ravenclawBoy from "C:/Users/ladof/Desktop/01-starting-setup/src/components/ravenclawBoy.png"
+// import ravenclawBoy from "C:/Users/ladof/Desktop/01-starting-setup/src/components/ravenclawBoy.png"
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Typography from "@mui/material/Typography";
@@ -77,7 +77,7 @@ function CharacterCardContainer(props) {
       {characterData.characters.map((character) => {
         return (
           <CharacterCard
-            replaceImage={ravenclawBoy}
+            // replaceImage={ravenclawBoy}
             fullName={character.name}
             house={character.house}
             dateOfBirth={character.dateOfBirth}
