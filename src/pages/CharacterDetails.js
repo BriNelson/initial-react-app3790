@@ -65,23 +65,23 @@ function CharacterDetails() {
 
             <TableBody>
                           <TableRow>
-                          <TableCell>Birthdday</TableCell>       
+                          <TableCell><b>Birthdday</b></TableCell>       
                 <TableCell><h4>{member.dateOfBirth}</h4></TableCell>
               </TableRow>
                           <TableRow>
-                          <TableCell>Gender</TableCell> 
+                          <TableCell><b>Gender</b></TableCell> 
                 <TableCell>{member.gender}</TableCell>
               </TableRow>
                           <TableRow>
-                          <TableCell>Ancestry</TableCell> 
+                          <TableCell><b>Ancestry</b></TableCell> 
                 <TableCell>{member.ancestry}</TableCell>
               </TableRow>
                           <TableRow>
-                          <TableCell>House</TableCell>
+                          <TableCell><b>House</b></TableCell>
                 <TableCell>{member.house}</TableCell>
               </TableRow>
                           <TableRow>
-                          <TableCell>Actor</TableCell>
+                          <TableCell><b>Actor</b></TableCell>
                 <TableCell>{member.actor}</TableCell>
               </TableRow>
             </TableBody>
