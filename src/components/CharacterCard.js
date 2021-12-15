@@ -22,7 +22,7 @@ function CharacterCard(props) {
   };
 
 
-  const handleInfoClick = ()
+  // const handleInfoClick = ()
   // const imageReplace = () => {
   //   if (props.image != "") {
   //     return props.image
