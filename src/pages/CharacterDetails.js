@@ -5,18 +5,14 @@ import { useCharacterContext } from "../contexts/CharactersContext";
 import {
   Box,
   Paper,
-  Card,
   CardMedia,
   TableContainer,
-  Cardheader,
-  CardContent,
   Divider,
   TableHead,
   Table,
   TableBody,
   TableCell,
   TableRow,
-  Typography,
 } from "@mui/material";
 
 function CharacterDetails() {
@@ -64,24 +60,34 @@ function CharacterDetails() {
             <Divider />
 
             <TableBody>
-                          <TableRow>
-                          <TableCell><b>Birthdday</b></TableCell>       
-                <TableCell><h4>{member.dateOfBirth}</h4></TableCell>
+              <TableRow>
+                <TableCell>
+                  <b>Birthdday</b>
+                </TableCell>
+                <TableCell>{member.dateOfBirth}</TableCell>
               </TableRow>
-                          <TableRow>
-                          <TableCell><b>Gender</b></TableCell> 
+              <TableRow>
+                <TableCell>
+                  <b>Gender</b>
+                </TableCell>
                 <TableCell>{member.gender}</TableCell>
               </TableRow>
-                          <TableRow>
-                          <TableCell><b>Ancestry</b></TableCell> 
+              <TableRow>
+                <TableCell>
+                  <b>Ancestry</b>
+                </TableCell>
                 <TableCell>{member.ancestry}</TableCell>
               </TableRow>
-                          <TableRow>
-                          <TableCell><b>House</b></TableCell>
+              <TableRow>
+                <TableCell>
+                  <b>House</b>
+                </TableCell>
                 <TableCell>{member.house}</TableCell>
               </TableRow>
-                          <TableRow>
-                          <TableCell><b>Actor</b></TableCell>
+              <TableRow>
+                <TableCell>
+                  <b>Actor</b>
+                </TableCell>
                 <TableCell>{member.actor}</TableCell>
               </TableRow>
             </TableBody>
