@@ -8,7 +8,7 @@
 
 Can be found on [line 77](src/pages/CharacterCardContainer.js) of characterCardCcontainer
 
-##3 2. Encapsulate your code as React functional components.
+### 2. Encapsulate your code as React functional components.
 Best seen in [App.js](/src/App.js) and [index.js](/src/idex.js)
 
 
