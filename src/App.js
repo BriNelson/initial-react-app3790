@@ -9,10 +9,11 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import Welcome from "./pages/Welcome";
 import HousesPage from "./pages/HousesPage";
-
+import NotFound from "./pages/NotFound";
 import LoginForm from "./components/LoginForm";
 import SignUpForm from "./components/SignUpForm";
 import NetlifyIdentityContext from "react-netlify-identity-gotrue";
+import CharacterDetails from "./pages/CharacterDetails";
 function App() {
   
   return (
@@ -29,7 +30,9 @@ function App() {
           <Route path="/Characters" element={<CharacterCardContainer />} />
           <Route path="/HousesPage" element={<HousesPage />} />
             <Route path="/login" element={<LoginForm />} />
-            <Route path="/signUp" element={<SignUpForm />} />
+              <Route path="/signUp" element={<SignUpForm />} />
+              <Route path="*" element={<NotFound />} />
+              <Route path="/character/:characterId" element={<CharacterDetails />} />
             
         </Routes>
       </CharacterContextProvider>

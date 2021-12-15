@@ -16,8 +16,13 @@ function CharacterCard(props) {
   const clickHandler = () => {
     setFavorite(!favorite);
 
+    
+
     // handleEmptyImage
   };
+
+
+  const handleInfoClick = ()
   // const imageReplace = () => {
   //   if (props.image != "") {
   //     return props.image
