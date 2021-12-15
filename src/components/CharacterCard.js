@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-
+import {useNavigate} from 'react-router-dom';
 import Card from "@mui/material/Card";
 // import Button from "@mui/material/Button";
 import CardContent from "@mui/material/CardContent";
 import BookmarkIcon from "@mui/icons-material/Bookmark";
+import InfoIcon from '@mui/icons-material/Info';
 import CardMedia from "@mui/material/CardMedia";
 
 import Typography from "@mui/material/Typography";
 
 function CharacterCard(props) {
-  const buttonText = "favorite";
-
+  
+  const navigate = useNavigate()
   const [favorite, setFavorite] = useState(false);
 
   const clickHandler = () => {
@@ -21,8 +22,12 @@ function CharacterCard(props) {
     // handleEmptyImage
   };
 
+  
+  const handleInfoClick = () => {
+  navigate(`/character/${props.fullName}`)
+};
 
-  // const handleInfoClick = ()
+  
   // const imageReplace = () => {
   //   if (props.image != "") {
   //     return props.image
@@ -62,12 +67,18 @@ function CharacterCard(props) {
         
 
         <BookmarkIcon
-          sx={{ color: favorite ? "blue" : "red" }}
+          sx={{
+            color: favorite ? "blue" : "red",
+            mr: 2
+          }}
+          
           variant="contained"
           onClick={clickHandler}
-        >
-          {buttonText}
-        </BookmarkIcon>
+        />
+        <InfoIcon
+          onClick={handleInfoClick}
+        />
+        
       </CardContent>
     </Card>
   );
