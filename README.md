@@ -25,10 +25,11 @@ Signup form works and validates. [Code here](src/components/SignUpForm.js), depl
 ### 6. Create at least 5 custom components and use them within at least two of your other components.
 1. NavBar
 2. Login
-3. signup
+3. signup (THIS IS WORKING) even thought it wasn't in class
 4. house cards(kinda broke, ran out of time)
 5. character cards
 6. pages (for what its worth)
+7. character info cards WORKING links wont really work to end points
 
 
 ### 7. Use a mix of CSS animations and Transition Component transitions to enhance some aspects of your project.
